@@ -153,3 +153,29 @@ The deadline is Dec 01, 2025 11:59 PM CST
 
 - For any submission between Dec 02, 12:00 AM CST and Dec 04, 11:59 PM CST will receive a 25 point reduction out of 100.
 - For any submission after Dec 05, 12:00 AM CST, you will be assigned a zero (0) out of 100.  
+
+## Task-6 (Additional Task) for the Students in COMP 6700 and COMP6700-D
+
+    Create an additional column called VALIDATED in the CSV from Task-5. It will be a Boolean flag: 1 or 0. You will assign 1 if you see the title or the body of the pull request to be actually related to security based on your knowledge. You will need to only manually inspect bodies and titles of pull requests for which the SECURITY flag is 1. Otherwise you will assign 0. The new CSV file will have the following header and data:
+
+ID: ID of the pull request 
+AGENT: The name of the agent that was used to create the pull request 
+TYPE: The type of the pull request 
+CONFIDENCE: The confidence of the pull request 
+SECURITY: A Boolean flag (1/0) that will report the status of the security status of the pull request. If security-related keywords appear in a body or title of the pull request, then the value will be 1, 0 otherwise. Use the keywords from the list in `References`
+VALIDATED: A Boolean flag. You will assign 1 if you see the title or the body of the pull request to be actually related to security based on your knowledge and also based the keyword scan. 0, otherwise. 
+
+## Task-7 (Additional Task) for the Students in COMP 6700 and COMP6700-D
+
+    Create an additional column called VULNERABLEFILE in the CSV from Task-4. It will be a Boolean flag: 1 or 0. You will assign 1 if: (i) the file is a Python program; (ii) the file is available in the repository; and (iii) the file contains >=1 vulnerability based on the scanning results of Bandit.
+
+PRID: Data related to `pr_id`
+PRSHA: Data related to `sha`
+PRCOMMITMESSAGE: Data related to `message`
+PRFILE: Data related to `filename`
+PRSTATUS: Data related to `status`
+PRADDS: Data related to `additions`
+PRDELSS: Data related to `deletions`
+PRCHANGECOUNT: Data related to `changes`
+PRDIFF: Data related to `patch`. Please remove special characters in the diff to avoid string encoding errors. 
+VULNERABLEFILE: Boolean. Assign 1 if the file is available, is Python, and contains >=1 vulnerability based on the scanning results of [Bandit](https://bandit.readthedocs.io/en/latest/).
