@@ -187,7 +187,7 @@ def process_vulnerabilities_for_commits(task4_df, batch_size=50):
             # Try to get repository information
             repo_id = str(row.get("PRID", ""))  # Using PRID as repo identifier
 
-            # For this implementation, we'll use the patch/diff content
+            # Use the patch/diff content
             # as a proxy for file content since accessing all repositories
             # would be rate-limited and time-consuming
 
